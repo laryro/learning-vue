@@ -17,12 +17,12 @@
         <div class="form-group">
           <label for="title">Note title</label>
           <input type="text" required class='form-control' v-model="note.title" id='title'>
-          <span class="error" v-if="showError(note.title)">Required</span>
+          <span class="error" v-show="showError(note.title)">Required</span>
         </div>
         <div class="form-group">
           <label for="text">Note text</label>
           <textarea required id="text" v-model="note.text" class="form-control"></textarea>
-          <span class="error" v-if="showError(note.text)">Required</span>
+          <span class="error" v-show="showError(note.text)">Required</span>
         </div>
         <button class="btn btn-primary" @click="submit">Submit</button>
       </div>
