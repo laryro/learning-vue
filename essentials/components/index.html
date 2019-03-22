@@ -9,6 +9,7 @@
 </head>
 <body>
   <div id="app">
+    <h1>This HTML code was rendered by a Vue component :)</h1>
     <counter :add-num="10"/>
   </div>
   <script>
@@ -36,7 +37,7 @@
           this.count += this.addNum;
         },
         decrease() {
-          this.count--;
+          this.count -= this.addNum;
         }
       },
     })

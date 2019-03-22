@@ -4,13 +4,28 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Vue App</title>
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+  <style>
+    #app {
+      text-align: left;
+    }
+  </style>
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <div id="app">
+    <h1>V-for</h1>
+    <p>the lists below were printed using <code>v-for</code> directive, along with <code>v-if</code> directive to filter results.</p>
+    <h2>complete color list:</h2>
+    <ul>
+      <li v-for="color in colors">{{color.text}} <span v-if="color.primary"> - Primary</span></li>
+    </ul>
+    <h2>color list filtered by <code>primary</code> attribute:</h2>
     <ul>
       <li v-for="color in colors" v-if="color.primary">{{color.text}}</li>
     </ul>
+    <br><br><br><br><a href="../../index.html">Back to home</a>
+
   </div>
   <script>
     var app = new Vue({

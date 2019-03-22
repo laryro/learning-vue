@@ -5,16 +5,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Page Title</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
+  <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
 
   <div id="app">
-    <h1 v-once>{{ title }}</h1>
+    <h1>Getting started</h1>
+    <p>Playing around with vue</p>
+    <h2 v-once>{{ title }}</h2>
+    <p>The above title was rendered using <code>data</code> object. It also uses the <code>v-once</code> directive, to prevent the title from changing due to future modifications on the <code>data</code> object.</p>
     <p>{{ sayHello() }} - <a v-bind:href="link" target="_blank">Google</a></p>
     <div v-html="completeLink">{{completeLink}}</div>
+    <br><br><br><br><a href="../../index.html">Back to home</a>
   </div>
 
-  <script src="https://unpkg.com/vue"></script>
   <script>
   new Vue({
     el: '#app',

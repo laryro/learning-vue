@@ -9,8 +9,12 @@
 </head>
 <body>
   <div id="app"><br><br><br><br><br>
+    <button class="vue-btn" @click="decrement">-</button>
     Count: {{count}}
-    <button class="vue-btn" @click="increment">Increment</button>
+    <button class="vue-btn" @click="increment">+</button>
+
+    <p>open console to see a <code>console.log</code> printed using the hook <code>updated</code> after each interaction with the buttons above.</p>
+    <br><br><br><br><a href="../../index.html">Back to home</a>
   </div>
   <script>
     var app = new Vue({
@@ -21,11 +25,13 @@
       methods: {
         increment() {
           this.count++;
+        },
+        decrement() {
+          this.count--;
         }
       },
       updated() {
         console.log('this.count', this.count);
-
       },
     });
   </script>

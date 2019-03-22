@@ -5,10 +5,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Vue App</title>
   <script src="https://unpkg.com/vue"></script>
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
 </head>
 <body>
   <div id="app">
-    <div v-bind:title="randNum" v-if="visible">Hover over me to see title</div>
+    <h1>Directives</h1>
+    <p>Open console and type <br><code>app.visible = true</code></p>
+    <div v-bind:title="randNum" v-if="visible">Hover over me to see a magic number</div>
+    <br><br><br><br><a href="../../index.html">Back to home</a>
+
   </div>
   <script>
     var app = new Vue({

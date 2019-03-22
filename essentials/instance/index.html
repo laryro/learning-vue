@@ -4,11 +4,20 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <title>Vue App</title>
+  <link rel="stylesheet" href="http://davidtkatz.com/public_css/vue.css">
   <script src="https://unpkg.com/vue"></script>
 </head>
 <body>
   <div id="app">
-    {{text}}!!!
+    <h1>Vue instance</h1>
+    <p>The text below was printed using the <code>data</code> object inside Vue instance!</p>
+    <h2>
+      {{text}}!!!
+    </h2>
+
+
+    <br><br><br><br><a href="../../index.html">Back to home</a>
+
   </div>
   <script>
     var app = new Vue({
